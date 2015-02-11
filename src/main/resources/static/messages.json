@@ -1,0 +1,143 @@
+"flightUpdate" : {
+	"scheduledDepartureTime" : "2015-01-13T12:42:00",
+	"flightNumber" : "UPS1234",
+	"tailNumber" : "N123UP",
+	"origin": "SDF",
+	"destination" : "LAX",
+	"parkingPosition" : "S12",
+	"latitude" : "38°10'5.30\"N",
+	"longitude" : "85°44'12.47\"W",
+	"crews" : [
+		{
+			"position" : "CPT",
+			"firstName" : "John",
+			"lastName" : "Doe",
+			"gemsId" : "0555000",
+			"status" : "onboard"   <== onboard, enroute, checkedin, unknown
+		},
+		{
+			"position" : "F/O",
+			"firstName" : "Tim",
+			"lastName" : "Carter",
+			"gemsId" : "0555111",
+			"status" : "enroute"
+		},
+		{
+			"position" : "JS",
+			"firstName" : "Jack",
+			"lastName" : "Miller",
+			"gemsId" : "0555222",
+			"status" : "waiting"
+		}
+	],
+	"status" : "loading"   <== loading, loaded, unloading, unloaded, idle, arrived, departed
+}
+
+"vanUpdate" : {
+	"updateType" : "positionReport",
+	"vanId" : "12345",
+	"driverFirstName" : "Mary",
+	"driverLastName" : "Taylor",
+	"latitude" : "38°10'5.30\"N",
+	"longitude" : "85°44'12.47\"W"
+}
+
+"vanUpdate" : {
+	"updateType" : "pickup",
+	"vanId" : "12345",
+	"driverFirstName" : "Mary",
+	"driverLastName" : "Taylor",
+	"latitude" : "38°10'5.30\"N",
+	"longitude" : "85°44'12.47\"W",
+	"crews" : [	 
+		{
+			"position" : "F/O",
+			"firstName" : "Tim",
+			"lastName" : "Carter",
+			"gemsId" : "0555111"
+		}
+	]
+}
+
+"vanUpdate" : {
+	"updateType" : "dropoff",
+	"vanId" : "12345",
+	"driverFirstName" : "Mary",
+	"driverLastName" : "Taylor",
+	"latitude" : "38°10'5.30\"N",
+	"longitude" : "85°44'12.47\"W",
+	"crews" : [	 
+		{
+			"position" : "F/O",
+			"firstName" : "Tim",
+			"lastName" : "Carter",
+			"gemsId" : "0555111"
+		}
+	]
+}
+
+PUT /vans/12345
+{
+	"vanId" : "12345",
+	"driverFirstName" : "Mary",
+	"driverLastName" : "Taylor",
+}
+
+PUT /vans/12345/position
+{
+	"latitude" : "38°10'5.30\"N",
+	"longitude" : "85°44'12.47\"W",
+}
+
+PUT /crews/0555111/status
+{
+	"status" : "pickup"
+}
+
+PUT /crews/0555111/status
+{
+	"status" : "dropoff"
+}
+
+GET /crews
+"crews" : [
+	{
+		"position" : "CPT",
+		"firstName" : "John",
+		"lastName" : "Doe",
+		"gemsId" : "0555000",
+		"scheduledDepartureTime" : "2015-01-13T12:42:00-0:00",
+		"flightNumber" : "UPS1234",
+		"tailNumber" : "N123UP",
+		"origin": "SDF",
+		"destination" : "LAX",
+		"parkingPosition" : "S12",
+		"status" : "waiting"
+	},
+	{
+		"position" : "F/O",
+		"firstName" : "Tim",
+		"lastName" : "Carter",
+		"gemsId" : "0555111",
+		"scheduledDepartureTime" : "2015-01-13T12:42:00-0:00",
+		"flightNumber" : "UPS1234",
+		"tailNumber" : "N123UP",
+		"origin": "SDF",
+		"destination" : "LAX",
+		"parkingPosition" : "S12",
+		"status" : "waiting"
+	},
+	{
+		"position" : "JS",
+		"firstName" : "Jack",
+		"lastName" : "Miller",
+		"gemsId" : "0555222",
+		"scheduledDepartureTime" : "2015-01-13T12:42:00-0:00",
+		"flightNumber" : "UPS1234",
+		"tailNumber" : "N123UP",
+		"origin": "SDF",
+		"destination" : "LAX",
+		"parkingPosition" : "S12",
+		"status" : "waiting"
+	}
+]

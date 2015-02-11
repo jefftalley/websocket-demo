@@ -1,0 +1,40 @@
+Desktop:
+- Pull up ramp page
+- Show tails with status
+- Hover over tails to show crew info
+
+iPad:
+- Show pickup crew page
+- Select crews and mark picked up
+
+Desktop:
+- Show updating position reports
+- Hover over van to show van and crew info
+
+iPad:
+- Select crews and mark dropped
+
+Desktop:
+- Show status change on tail
+- Hover over tail to show crew info
+
+Technology:
+- Spring boot
+- WebSockets
+- Stomp
+
+Future Capabilities:
+- Configurable to any gateway
+- Use overlays for ramps
+- Pickup from aircraft for arriving flights
+- Pickup to/from airport terminal
+- Allow crews to request pickups from EFK (iPad)
+- Alerts for late crews
+- Messaging to/from van drivers
+
+Data Needs:
+- Parking positions
+- Flights
+- Crew Schedules
+- Jumpseats
+- Simulated van position reports

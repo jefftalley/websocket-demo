@@ -1,0 +1,90 @@
+package demo.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.joda.time.DateTime;
+
+public class FlightUpdate {
+	DateTime scheduleDepartureTime;
+	String flightNumber;
+	String tailNumber;
+	String origin;
+	String destination;
+	String parkingPosition;
+	String latitude;
+	String longitude;
+	List<Crew> crews = new ArrayList<Crew>();
+
+	public DateTime getScheduleDepartureTime() {
+		return scheduleDepartureTime;
+	}
+
+	public void setScheduleDepartureTime(DateTime scheduleDepartureTime) {
+		this.scheduleDepartureTime = scheduleDepartureTime;
+	}
+
+	public String getFlightNumber() {
+		return flightNumber;
+	}
+
+	public void setFlightNumber(String flightNumber) {
+		this.flightNumber = flightNumber;
+	}
+
+	public String getTailNumber() {
+		return tailNumber;
+	}
+
+	public void setTailNumber(String tailNumber) {
+		this.tailNumber = tailNumber;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public String getParkingPosition() {
+		return parkingPosition;
+	}
+
+	public void setParkingPosition(String parkingPosition) {
+		this.parkingPosition = parkingPosition;
+	}
+
+	public String getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+
+	public String getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+
+	public List<Crew> getCrews() {
+		return crews;
+	}
+
+	public void setCrews(List<Crew> crews) {
+		this.crews = crews;
+	}
+}
