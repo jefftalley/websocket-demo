@@ -6,15 +6,15 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 public class FlightUpdate {
-	DateTime scheduleDepartureTime;
-	String flightNumber;
-	String tailNumber;
-	String origin;
-	String destination;
-	String parkingPosition;
-	String latitude;
-	String longitude;
-	List<Crew> crews = new ArrayList<Crew>();
+	private DateTime scheduleDepartureTime;
+	private String flightNumber;
+	private String tailNumber;
+	private String origin;
+	private String destination;
+	private String parkingPosition;
+	private String latitude;
+	private String longitude;
+	private List<Crew> crews = new ArrayList<Crew>();
 
 	public DateTime getScheduleDepartureTime() {
 		return scheduleDepartureTime;
